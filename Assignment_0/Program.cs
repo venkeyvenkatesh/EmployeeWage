@@ -2,49 +2,56 @@
 
 namespace Assignment_0
 {
-    
-    
+
+
     class Program
     {
-
-        // contants
+        //variable
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 20;
-        public const int NUM_OF_WORKING_DAYS = 2;
+        public const int TOTAL_WORKING_HOURS = 100;
+        public const int TOTAL_WORKING_DAYS = 20;
+        public const int WAGE_PER_HOUR = 20;
 
         static void Main(string[] args)
         {
-            //variable
-            
-            int empHrs = 0,empWage = 0, totalEmpWage = 0;
+            Random rand = new Random();
 
-            for(int day=1;day<=NUM_OF_WORKING_DAYS;day++)
+
+
+            int numberOfHours = 0;
+            int workingDays = 0;
+            int total_wage = 0;
+
+
+            while (numberOfHours <= TOTAL_WORKING_HOURS && workingDays <= TOTAL_WORKING_DAYS)
             {
-                Random random = new Random();
-                int empCheck = random.Next(0, 3);
-                switch (empCheck)
+                int type = rand.Next(0, 3);
+                int hours = 0;
+                switch (type)
                 {
                     case IS_FULL_TIME:
-                        empHrs = 8;
+                        hours = 8;
                         break;
                     case IS_PART_TIME:
-                       empHrs = 4;
+                        hours = 4;
                         break;
                     default:
-                       empHrs = 0;
+                        hours = 0;
                         break;
+
                 }
 
-                empWage = empHrs * EMP_RATE_PER_HOUR;
-                totalEmpWage = totalEmpWage + empWage;
+                numberOfHours += hours;
 
-                Console.WriteLine("Emp Wage for day "+ day +" is :" + empWage);
+                workingDays++;
+
+
+                Console.Out.WriteLine("Day " + workingDays + " hours " + hours);
+                total_wage = total_wage + (hours) * WAGE_PER_HOUR;
 
             }
-           
-
-            Console.Out.WriteLine("Total Emp wage : "+totalEmpWage);
+            Console.WriteLine("Total wage :" + total_wage);
         }
     }
 }
