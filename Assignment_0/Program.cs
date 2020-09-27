@@ -7,30 +7,34 @@ namespace Assignment_0
         static void Main(string[] args)
         {
             Random rand = new Random();
+            int is_full_time = 1;
+            int is_part_time = 2;
+            int wage = 20;
 
-            //constants
-            int IS_FULL_TIME = 1;
-            int EMP_RATE_PER_HOUR = 20;
+            //variable
+            int type = rand.Next(0, 3);
+            int hours = 0;
+            int total_wage = 0;
 
-            //variables
-
-            int empWage = 0;
-            int empHours = 0;
-
-            int empCheck = rand.Next(0, 2);
-
-            if (IS_FULL_TIME == empCheck)
+            if (is_full_time == type)
             {
-                empHours = 8;
+                hours = 8;
+
+            }
+            else if (is_part_time == type)
+            {
+                hours = 4;
             }
             else
             {
-                empHours = 0;
+                hours = 0;
             }
 
-            empWage = empHours * EMP_RATE_PER_HOUR;
 
-            Console.Out.WriteLine("Wage is : " + empWage);
+            total_wage = hours * wage;
+
+
+            Console.Out.WriteLine(total_wage);
         }
     }
 }
