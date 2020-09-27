@@ -4,11 +4,15 @@ namespace Assignment_0
 {
     class Program
     {
+        // contants
+        public const int IS_FULL_TIME = 1;
+        public const int IS_PART_TIME = 2;
+
         static void Main(string[] args)
         {
             Random rand = new Random();
-            int is_full_time = 1;
-            int is_part_time = 2;
+
+          
             int wage = 20;
 
             //variable
@@ -16,18 +20,17 @@ namespace Assignment_0
             int hours = 0;
             int total_wage = 0;
 
-            if (is_full_time == type)
+            switch (type)
             {
-                hours = 8;
-
-            }
-            else if (is_part_time == type)
-            {
-                hours = 4;
-            }
-            else
-            {
-                hours = 0;
+                case IS_FULL_TIME:
+                    hours = 8;
+                    break;
+                case IS_PART_TIME:
+                    hours = 4;
+                    break;
+                default:
+                    hours = 0;
+                    break;
             }
 
 
