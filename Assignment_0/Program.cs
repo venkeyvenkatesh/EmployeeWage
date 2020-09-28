@@ -51,27 +51,29 @@ namespace Assignment_0
 
             }
         }
-                 public static  int MonthlyWage(String companyName, int TOTAL_WORKING_DAYS,int WAGE_PER_HOUR )
-            { 
-                 int numberOfHours = 0;
-            // int workingDays = 0;
-               int total_wage = 0;
-                for (int workingDays = 1; workingDays <= TOTAL_WORKING_DAYS; workingDays++)
-                {
+        public static int MonthlyWage(String companyName, int TOTAL_WORKING_DAYS, int WAGE_PER_HOUR)
+        {
+            int numberOfHours = 0;
+            int workingDays = 0;
+            int total_wage = 0;
+            int total_workingHrs = 0;
+            while (total_workingHrs <= 100 && workingDays < 20)
+            {
                 numberOfHours = EmpHours();
 
-                    //workingDays++;
+                workingDays++;
 
 
-                   // Console.WriteLine("Day " + workingDays + " hours " + numberOfHours);
-                    total_wage = total_wage + (numberOfHours) * WAGE_PER_HOUR;
-                }
-                    return total_wage;
-                }
-
-               
-
+               //Console.WriteLine("Day " + workingDays + " hours " + numberOfHours);
+                total_workingHrs += numberOfHours;
+                total_wage = total_wage + (numberOfHours) * WAGE_PER_HOUR;
             }
+            return total_wage;
+        }
+
+
+
+    }
            
         }
     
