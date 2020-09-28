@@ -11,15 +11,20 @@ namespace Assignment_0
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
         public const int TOTAL_WORKING_HOURS = 100;
-        public const int TOTAL_WORKING_DAYS = 20;
-        public const int WAGE_PER_HOUR = 20;
+      //  public const int TOTAL_WORKING_DAYS = 20;
+      //  public const int WAGE_PER_HOUR = 20;
 
 
 
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Total wage :" + MonthlyWage());
+            Console.WriteLine("Total wage  is  :" + MonthlyWage("CAP",20,20));
+            Console.WriteLine("Total wage  is :" + MonthlyWage("gem", 10, 10));
+
+        
+           
+
 
         }
 
@@ -46,7 +51,7 @@ namespace Assignment_0
 
             }
         }
-                 public static  int MonthlyWage()
+                 public static  int MonthlyWage(String companyName, int TOTAL_WORKING_DAYS,int WAGE_PER_HOUR )
             { 
                  int numberOfHours = 0;
             // int workingDays = 0;
@@ -58,7 +63,7 @@ namespace Assignment_0
                     //workingDays++;
 
 
-                    Console.WriteLine("Day " + workingDays + " hours " + numberOfHours);
+                   // Console.WriteLine("Day " + workingDays + " hours " + numberOfHours);
                     total_wage = total_wage + (numberOfHours) * WAGE_PER_HOUR;
                 }
                     return total_wage;
