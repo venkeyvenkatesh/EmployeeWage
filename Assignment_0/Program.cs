@@ -5,7 +5,7 @@ namespace Assignment_0
 {
 
 
-    class Program
+    public class Program
     {
 
 
@@ -13,12 +13,12 @@ namespace Assignment_0
         static void Main(string[] args)
         {
 
-            EmpWageBuilderObject Capgemini = new EmpWageBuilderObject("CAPGEMINI", 20, 3, 25);
-            EmpWageBuilderObject Wipro = new EmpWageBuilderObject("WIPRO", 15, 4, 30);
+            EmpWageBuilderObject myobject = new EmpWageBuilderObject();
+            myobject.addCompanyEmpWage("CAPGEMINI", 20, 4, 30);
+            myobject.addCompanyEmpWage("Wipro", 10, 4, 20);
 
-            Capgemini.computeWage();
-            Wipro.computeWage();
 
+            myobject.computeEmpWage();
 
 
 
