@@ -53,7 +53,7 @@ namespace Assignment_0
                int total_wage = 0;
                 for (int workingDays = 1; workingDays <= TOTAL_WORKING_DAYS; workingDays++)
                 {
-                    numberOfHours = EmpHours();
+                numberOfHours = EmpHours();
 
                     //workingDays++;
 
