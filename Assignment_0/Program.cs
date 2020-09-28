@@ -13,11 +13,11 @@ namespace Assignment_0
         static void Main(string[] args)
         {
 
-            EmpWageBuilderObject Capgemini = new EmpWageBuilderObject("CAPGEMINI", 20, 3, 25);
-            EmpWageBuilderObject Wipro = new EmpWageBuilderObject("WIPRO", 15, 4, 30);
+            EmpWage Capgemini = new EmpWage("CAPGEMINI", 20, 3, 25);
+            EmpWage Wipro = new EmpWage("WIPRO", 15, 4, 30);
 
-            Capgemini.computeWage();
-            Wipro.computeWage();
+           int cap_salary= Capgemini.computeWage();
+            int wipro_salary=Wipro.computeWage();
 
 
 
