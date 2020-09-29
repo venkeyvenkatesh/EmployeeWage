@@ -14,7 +14,7 @@ namespace Assignment_0
         {
             Console.WriteLine("Enter the number of companies");
             int n = Convert.ToInt32(Console.ReadLine());
-            
+
             EmpWage[] obj = new EmpWage[n];
 
             for (int i = 0; i < n; i++)
@@ -23,18 +23,26 @@ namespace Assignment_0
                 string company = Console.ReadLine();
                 obj[i] = new EmpWage(company, 20, 3, 25);
 
-              
+
                 dictionary.Add(obj[i].GetCompany(), obj[i].computeWage());
                 obj[i].displayDailyWage();
-                // getWageByCompany(obj[i].GetCompany());
+                getWageByCompany(obj[i].GetCompany());
             }
-
-            foreach(KeyValuePair<string,int> kvp in dictionary)
-            {
-                Console.WriteLine("The wage of employee in " + kvp.Key + " is " + kvp.Value);
-            }
-
         }
+
+            public static void getWageByCompany(string company)
+            {
+
+                foreach (KeyValuePair<string, int> kvp in dictionary)
+                {
+                    if (string.Compare(company, kvp.Key) == 0)
+                    {
+                        Console.WriteLine("The total wage in " + company + " is : " + kvp.Value);
+                        break;
+                    }
+                }
+
+            }
 
        
         }
