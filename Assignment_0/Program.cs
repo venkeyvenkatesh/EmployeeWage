@@ -25,8 +25,8 @@ namespace Assignment_0
 
               
                 dictionary.Add(obj[i].GetCompany(), obj[i].computeWage());
-                
-               // getWageByCompany(obj[i].GetCompany());
+                obj[i].displayDailyWage();
+                // getWageByCompany(obj[i].GetCompany());
             }
 
             foreach(KeyValuePair<string,int> kvp in dictionary)

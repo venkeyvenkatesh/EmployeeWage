@@ -16,7 +16,15 @@ namespace Assignment_0
         private int noOfWorkingDays;
         private int maxHoursPerMonth;
 
-       
+
+        private Dictionary<int, int> dailyWage = new Dictionary<int, int>();
+        public void displayDailyWage()
+        {
+            foreach (KeyValuePair<int, int> kvp in this.dailyWage)
+            {
+                Console.WriteLine("Day  " + kvp.Key + " wage  is " + kvp.Value);
+            }
+        }
 
         public EmpWage(string company,  int empWagePerHour,  int noOfWorkingDays,  int maxHoursPerMonth )
             {
@@ -57,7 +65,7 @@ namespace Assignment_0
             public int computeWage()
          {
 
-            //int days = 1;
+            int days = 1;
             int totalEmpWage = 0;
             int hour = 0;
             int numberOfHours = 0;
@@ -68,8 +76,8 @@ namespace Assignment_0
             {
                 hour = EmpHours();
             workingDays++;
-              //  this.dailyWage.Add(days, hour*this.empWagePerHour);
-              //  days++;
+               this.dailyWage.Add(days, hour*this.empWagePerHour);
+                days++;
             numberOfHours += hour;
            // Console.WriteLine("Days " + workingDays + " Emp hrs " + empHrs);
 
