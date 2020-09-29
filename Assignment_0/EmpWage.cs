@@ -15,6 +15,7 @@ namespace Assignment_0
         private int empWagePerHour;
         private int noOfWorkingDays;
         private int maxHoursPerMonth;
+
        
 
         public EmpWage(string company,  int empWagePerHour,  int noOfWorkingDays,  int maxHoursPerMonth )
@@ -24,6 +25,8 @@ namespace Assignment_0
             this.noOfWorkingDays=noOfWorkingDays;
             this.maxHoursPerMonth=maxHoursPerMonth;
             }
+
+      
         public String GetCompany()
         {
             return this.company;
@@ -54,19 +57,20 @@ namespace Assignment_0
             public int computeWage()
          {
 
-          
+            //int days = 1;
             int totalEmpWage = 0;
-
+            int hour = 0;
             int numberOfHours = 0;
              int workingDays = 0;
      
 
             while (numberOfHours <= this.maxHoursPerMonth && workingDays < this.noOfWorkingDays)
             {
-
+                hour = EmpHours();
             workingDays++;
-            
-            numberOfHours += EmpHours();
+              //  this.dailyWage.Add(days, hour*this.empWagePerHour);
+              //  days++;
+            numberOfHours += hour;
            // Console.WriteLine("Days " + workingDays + " Emp hrs " + empHrs);
 
             }
