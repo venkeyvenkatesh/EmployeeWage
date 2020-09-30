@@ -4,7 +4,13 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Assignment_0
 {
-   
+    public interface IcompanyWage
+    {
+        public void displayDailyWage();
+        public int computeWage();
+
+    }
+
     public class Program
     {
 
