@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Assignment_0
 {
-    class EmpWage
+    class EmpWage :IcompanyWage
     {
         //variable
         public const int IS_FULL_TIME = 1;

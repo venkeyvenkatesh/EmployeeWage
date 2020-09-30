@@ -6,8 +6,8 @@ namespace Assignment_0
 {
     public interface IcompanyWage
     {
-        public void displayDailyWage();
-        public int computeWage();
+         void displayDailyWage();
+         int computeWage();
 
     }
 
